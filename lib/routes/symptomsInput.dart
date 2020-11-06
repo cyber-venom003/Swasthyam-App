@@ -41,6 +41,33 @@ class _SymptomsInputState extends State<SymptomsInput> {
         )
       );
     }
+    symptomTile.add(
+        FlatButton(
+          onPressed: null,
+          child: Container(
+            width: 230,
+            height: 45,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Predict Disease",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22.5,
+                    fontWeight: FontWeight.w500
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(26.0),
+              color: const Color(0xff3f9bfc),
+              border:
+              Border.all(width: 1.0, color: const Color(0xff3f9bfc)),
+            ),
+          ),
+        )
+    );
     return symptomTile;
   }
 
@@ -115,7 +142,7 @@ class _SymptomsInputState extends State<SymptomsInput> {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

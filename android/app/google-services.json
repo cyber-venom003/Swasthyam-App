@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "443107267868",
+    "firebase_url": "https://swasthyam-796b2.firebaseio.com",
+    "project_id": "swasthyam-796b2",
+    "storage_bucket": "swasthyam-796b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443107267868:android:2b72492c487ff2b30196d9",
+        "android_client_info": {
+          "package_name": "org.cybervenom003.swasthyam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443107267868-fbjg9ip670t1p080b8bitqvs2dmfuq07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCopDXPuW18D_yudTE3FMgTqcrLh4NCOPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443107267868-fbjg9ip670t1p080b8bitqvs2dmfuq07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
