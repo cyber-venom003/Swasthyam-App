@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:swasthyam/routes/predictedDisease.dart';
 
 class SymptomsInput extends StatefulWidget {
   @override
@@ -43,7 +44,9 @@ class _SymptomsInputState extends State<SymptomsInput> {
     }
     symptomTile.add(
         FlatButton(
-          onPressed: null,
+          onPressed: () {
+            Navigator.push(context , MaterialPageRoute(builder: (context) => PredictDisease(symptoms: symptomStrings,)));
+          },
           child: Container(
             width: 230,
             height: 45,
