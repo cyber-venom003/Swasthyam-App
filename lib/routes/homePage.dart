@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:swasthyam/routes/diseaseInput.dart';
 import 'package:swasthyam/routes/symptomsInput.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:swasthyam/routes/testInput.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
               children: [
                 SymptomsInput(),
                 DiseaseInput(),
-                Icon(Icons.access_alarm)
+                TestInput()
               ]
           ),
         )
