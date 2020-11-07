@@ -118,6 +118,7 @@ class _SymptomsInputState extends State<SymptomsInput> {
                   if(symptom != null && symptom.length != 0) {
                     setState(() {
                       patientSymptoms.add(symptom);
+                      symptom = null;
                     });
                   }
                   else {
