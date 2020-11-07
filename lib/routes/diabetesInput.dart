@@ -1,7 +1,9 @@
+import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:http/http.dart' as http;
 
 class DiabetesInput extends StatefulWidget {
   @override
@@ -11,6 +13,8 @@ class DiabetesInput extends StatefulWidget {
 class _DiabetesInputState extends State<DiabetesInput> {
   int pregnancies, glucose, bloodPressure, skinThickness, insulin, bmi, age;
   double diabetesPedgreeFuncion;
+  String url = "http://192.168.1.7:5000/predict";
+  int show = -1;
   @override
   void initState() {
     pregnancies = 0;
@@ -23,7 +27,22 @@ class _DiabetesInputState extends State<DiabetesInput> {
     diabetesPedgreeFuncion = 0.47;
     super.initState();
   }
-
+  void getPredictions(int pregnancies, int glucose, int bloodPressure, int skinThickness, int insulin, int bmi, int age , double diabetesPedgreeFuncion) async {
+    var response = await http.post(url , body: {
+      "disease": "diabetes",
+      "pregnancies": "$pregnancies",
+      "glucose": "$glucose",
+      "blood pressure": "$bloodPressure",
+      "skin thickness": "$skinThickness",
+      "insulin": "$insulin",
+      "BMI": "$bmi",
+      "diabetes pedegree function": "$diabetesPedgreeFuncion",
+      "age": "$age",
+    });
+    setState(() {
+      show = jsonDecode(response.body)['prediction'];
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -191,6 +210,49 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   },
                 ),
               ),
+              show == 1 ? ListTile(
+                subtitle: Text("High Risk",
+                  style: TextStyle(
+                    fontSize: 22.5,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.red
+                  )
+                ),
+                title: Text("Your Diabetes Risk",
+                    style: TextStyle(
+                        fontSize: 17.5,
+                        fontWeight: FontWeight.w500,
+                    )
+                ),
+              ) : show == 0 ?  ListTile(
+                subtitle: Text("Low Risk",
+                    style: TextStyle(
+                        fontSize: 22.5,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.green
+                    )
+                ),
+                title: Text("Your Diabetes Risk",
+                    style: TextStyle(
+                      fontSize: 17.5,
+                      fontWeight: FontWeight.w500,
+                    )
+                ),
+              ) : ListTile(
+                subtitle: Text("Not Tested",
+                    style: TextStyle(
+                        fontSize: 22.5,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.grey
+                    )
+                ),
+                title: Text("Your Diabetes Risk",
+                    style: TextStyle(
+                      fontSize: 17.5,
+                      fontWeight: FontWeight.w500,
+                    )
+                ),
+              )
             ],
           ),
         ),
@@ -206,17 +268,16 @@ class _DiabetesInputState extends State<DiabetesInput> {
           bmi = bmi ?? 32;
           diabetesPedgreeFuncion = diabetesPedgreeFuncion ?? 0.47;
           age = age ?? 35;
-          print("""
-          Details captured from user:
-          pregnancies: $pregnancies,
-          glucode: $glucose,
-          bloodPressure: $bloodPressure,
-          skinThickness: $skinThickness,
-          insulin: $insulin,
-          bmi: $bmi,
-          diabetespedegreeFunction: $diabetesPedgreeFuncion,
-          age: $age
-          """);
+          getPredictions(
+              pregnancies,
+              glucose,
+              bloodPressure,
+              skinThickness,
+              insulin,
+              bmi,
+              age,
+              diabetesPedgreeFuncion);
+          print("$pregnancies, $glucose, $bloodPressure, $skinThickness, $insulin, $bmi, $age, $diabetesPedgreeFuncion");
         },
       ),
     );
