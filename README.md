@@ -32,6 +32,7 @@ See on drive: https://drive.google.com/drive/folders/1bEFF8TWnppy2czvEJkfYR0PTtm
 ## Future Enhancements
 
 Future things we will integrate here:-
+
 1.) Personalized Chatbot based on NLP and vision to communicate with the users/Patient.
 2.) BERT(Bidirectional encoder representations from transformers) and GPT based feature chatbots so patient can directly talk and symptoms can be auto recognized
 3.) Medical report generation with the help GAN and BERT-text summarizer
