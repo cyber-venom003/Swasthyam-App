@@ -33,11 +33,11 @@ See on drive: https://drive.google.com/drive/folders/1bEFF8TWnppy2czvEJkfYR0PTtm
 
 Future things we will integrate here:-
 
-1.) Personalized Chatbot based on NLP and vision to communicate with the users/Patient.
-2.) BERT(Bidirectional encoder representations from transformers) and GPT based feature chatbots so patient can directly talk and symptoms can be auto recognized
-3.) Medical report generation with the help GAN and BERT-text summarizer
-4.) Adding Doctors contact and links so that those users can get a complete solution at a place
-5.) Encoder-Decoder with Attention based language tranlation model to allow user communicate in every language
+- Personalized Chatbot based on NLP and vision to communicate with the users/Patient.
+- BERT(Bidirectional encoder representations from transformers) and GPT based feature chatbots so patient can directly talk and symptoms can be auto recognized
+- Medical report generation with the help GAN and BERT-text summarizer
+- Adding Doctors contact and links so that those users can get a complete solution at a place
+- Encoder-Decoder with Attention based language tranlation model to allow user communicate in every language
 
 ## Running project on your local machine
 
