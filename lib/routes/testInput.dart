@@ -17,24 +17,58 @@ class _TestInputState extends State<TestInput> {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Provide Test Details for any of the following Diseases"),
+          ),
           RaisedButton(
-              child: Text("Diabetes"),
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+              child: Text(
+                "Covid",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CovidInput()));
+              }),
+          RaisedButton(
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+              child: Text(
+                "Diabetes",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DiabetesInput()));
               }),
-          RaisedButton(child: Text("Covid"), onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CovidInput()));
-          }),
-          RaisedButton(child: Text("Pneumonia"), onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => PneumoniaInput()));
-          }),
-          RaisedButton(child: Text("Brain Tumour"), onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => TumourInput()));
-          }),
+          RaisedButton(
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+              child: Text(
+                "Pneumonia",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PneumoniaInput()));
+              }),
+          RaisedButton(
+              color: Colors.blue,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25)),
+              child: Text(
+                "Brain Tumour",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TumourInput()));
+              }),
         ],
       ),
     );
