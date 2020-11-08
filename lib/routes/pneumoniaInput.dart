@@ -14,7 +14,7 @@ class _PneumoniaInputState extends State<PneumoniaInput> {
   int pneumoniaRisk = 0;
   void sendRequest(filename) async {
     var request = http.MultipartRequest(
-        'POST', Uri.parse("http://192.168.1.7:5000/predict"));
+        'POST', Uri.parse("http://192.168.1.7:5000/predict"));    // This is local ip of the network on which flask server is running
     request.files.add(await http.MultipartFile.fromPath('image', filename));
     request.fields.addAll({"disease": "pneumonia"});
     try {

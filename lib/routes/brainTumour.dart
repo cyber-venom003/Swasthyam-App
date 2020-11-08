@@ -14,7 +14,7 @@ class _TumourInputState extends State<TumourInput> {
   int tumourRisk = 0;
   void sendRequest(filename) async {
     var request = http.MultipartRequest(
-        'POST', Uri.parse("http://192.168.1.7:5000/predict"));
+        'POST', Uri.parse("http://192.168.1.7:5000/predict"));      // This is local ip of the network on which flask server is running
     request.files.add(await http.MultipartFile.fromPath('image', filename));
     request.fields.addAll({"disease": "brainTumour"});
     try {
@@ -46,34 +46,6 @@ class _TumourInputState extends State<TumourInput> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // FlatButton(
-              //   onPressed: () {
-              //     uploadImage();
-              //   },
-              //   child: Container(
-              //     width: 230,
-              //     height: 45,
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(8.0),
-              //       child: Text(
-              //         "Upload MRI Image",
-              //         style: TextStyle(
-              //             color: Colors.white,
-              //             fontSize: 22.5,
-              //             fontWeight: FontWeight.w500
-              //         ),
-              //         textAlign: TextAlign.center,
-              //       ),
-              //     ),
-              //     decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(26.0),
-              //       color: const Color(0xff3f9bfc),
-              //       border:
-              //       Border.all(width: 1.0, color: const Color(0xff3f9bfc)),
-              //     ),
-              //   ),
-              // ),
-
               Card(
                 child: ListTile(
                     leading: FaIcon(FontAwesomeIcons.fileInvoice),

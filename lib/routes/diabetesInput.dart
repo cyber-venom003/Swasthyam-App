@@ -13,7 +13,7 @@ class DiabetesInput extends StatefulWidget {
 class _DiabetesInputState extends State<DiabetesInput> {
   int pregnancies, glucose, bloodPressure, skinThickness, insulin, bmi, age;
   double diabetesPedgreeFuncion;
-  String url = "http://192.168.1.7:5000/predict";
+  String url = "http://192.168.1.7:5000/predict"; // This is local ip of the network on which flask server is running
   int show = -1;
   @override
   void initState() {
