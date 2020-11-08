@@ -9,5 +9,5 @@ A flutter app for detecting the probablistic diseases in patients using Machine 
 
 - [x] Setup Basic Flutter Project
 - [x] Implement functionality to get the diseases from symptoms.
-- [ ] Implement functionality to get recommended tests from diseases.
-- [ ] Using the deployed models in app to get disease probability from test results.
+- [x] Implement functionality to get recommended tests from diseases.
+- [x] Using the deployed models in app to get disease probability from test results.

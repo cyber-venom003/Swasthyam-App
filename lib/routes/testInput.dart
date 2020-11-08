@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:swasthyam/routes/brainTumour.dart';
+import 'package:swasthyam/routes/covidInput.dart';
 import 'package:swasthyam/routes/diabetesInput.dart';
+import 'package:swasthyam/routes/pneumoniaInput.dart';
 
 class TestInput extends StatefulWidget {
   @override
@@ -20,10 +23,18 @@ class _TestInputState extends State<TestInput> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DiabetesInput()));
               }),
-          RaisedButton(child: Text("Cardio Vascular"), onPressed: () {}),
-          RaisedButton(child: Text("Covid"), onPressed: () {}),
-          RaisedButton(child: Text("Pneumonia"), onPressed: () {}),
-          RaisedButton(child: Text("Breast Cancer"), onPressed: () {}),
+          RaisedButton(child: Text("Covid"), onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => CovidInput()));
+          }),
+          RaisedButton(child: Text("Pneumonia"), onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PneumoniaInput()));
+          }),
+          RaisedButton(child: Text("Brain Tumour"), onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => TumourInput()));
+          }),
         ],
       ),
     );
