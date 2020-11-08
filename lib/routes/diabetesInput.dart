@@ -27,8 +27,17 @@ class _DiabetesInputState extends State<DiabetesInput> {
     diabetesPedgreeFuncion = 0.47;
     super.initState();
   }
-  void getPredictions(int pregnancies, int glucose, int bloodPressure, int skinThickness, int insulin, int bmi, int age , double diabetesPedgreeFuncion) async {
-    var response = await http.post(url , body: {
+
+  void getPredictions(
+      int pregnancies,
+      int glucose,
+      int bloodPressure,
+      int skinThickness,
+      int insulin,
+      int bmi,
+      int age,
+      double diabetesPedgreeFuncion) async {
+    var response = await http.post(url, body: {
       "disease": "diabetes",
       "pregnancies": "$pregnancies",
       "glucose": "$glucose",
@@ -43,10 +52,11 @@ class _DiabetesInputState extends State<DiabetesInput> {
       show = jsonDecode(response.body)['prediction'];
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Diabetes")),
+      appBar: AppBar(title: Text("Diabetes Test Resutls")),
       body: Container(
         child: SingleChildScrollView(
           child: Column(
@@ -210,55 +220,58 @@ class _DiabetesInputState extends State<DiabetesInput> {
                   },
                 ),
               ),
-              show == 1 ? ListTile(
-                subtitle: Text("High Risk",
-                  style: TextStyle(
-                    fontSize: 22.5,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.red
-                  )
-                ),
-                title: Text("Your Diabetes Risk",
-                    style: TextStyle(
-                        fontSize: 17.5,
-                        fontWeight: FontWeight.w500,
+              show == 1
+                  ? Card(
+                      child: ListTile(
+                        subtitle: Text("High Risk",
+                            style: TextStyle(
+                                fontSize: 22.5,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.red)),
+                        title: Text("Your Diabetes Risk",
+                            style: TextStyle(
+                              fontSize: 17.5,
+                              fontWeight: FontWeight.w500,
+                            )),
+                      ),
                     )
-                ),
-              ) : show == 0 ?  ListTile(
-                subtitle: Text("Low Risk",
-                    style: TextStyle(
-                        fontSize: 22.5,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.green
-                    )
-                ),
-                title: Text("Your Diabetes Risk",
-                    style: TextStyle(
-                      fontSize: 17.5,
-                      fontWeight: FontWeight.w500,
-                    )
-                ),
-              ) : ListTile(
-                subtitle: Text("Not Tested",
-                    style: TextStyle(
-                        fontSize: 22.5,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey
-                    )
-                ),
-                title: Text("Your Diabetes Risk",
-                    style: TextStyle(
-                      fontSize: 17.5,
-                      fontWeight: FontWeight.w500,
-                    )
-                ),
-              )
+                  : show == 0
+                      ? Card(
+                          child: ListTile(
+                            subtitle: Text("Low Risk",
+                                style: TextStyle(
+                                    fontSize: 22.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.green)),
+                            title: Text("Your Diabetes Risk",
+                                style: TextStyle(
+                                  fontSize: 17.5,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                          ),
+                        )
+                      : Card(
+                          child: ListTile(
+                            subtitle: Text("Not Tested",
+                                style: TextStyle(
+                                    fontSize: 22.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey)),
+                            title: Text("Your Diabetes Risk",
+                                style: TextStyle(
+                                  fontSize: 17.5,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                          ),
+                        ),
+              SizedBox(height: 100)
             ],
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: FaIcon(FontAwesomeIcons.bookMedical),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: FaIcon(FontAwesomeIcons.bookMedical),
+        label: Text("Get Results"),
         onPressed: () {
           pregnancies = pregnancies ?? 0;
           glucose = glucose ?? 121;
@@ -268,16 +281,10 @@ class _DiabetesInputState extends State<DiabetesInput> {
           bmi = bmi ?? 32;
           diabetesPedgreeFuncion = diabetesPedgreeFuncion ?? 0.47;
           age = age ?? 35;
-          getPredictions(
-              pregnancies,
-              glucose,
-              bloodPressure,
-              skinThickness,
-              insulin,
-              bmi,
-              age,
-              diabetesPedgreeFuncion);
-          print("$pregnancies, $glucose, $bloodPressure, $skinThickness, $insulin, $bmi, $age, $diabetesPedgreeFuncion");
+          getPredictions(pregnancies, glucose, bloodPressure, skinThickness,
+              insulin, bmi, age, diabetesPedgreeFuncion);
+          print(
+              "$pregnancies, $glucose, $bloodPressure, $skinThickness, $insulin, $bmi, $age, $diabetesPedgreeFuncion");
         },
       ),
     );
