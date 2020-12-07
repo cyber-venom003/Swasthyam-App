@@ -1,4 +1,4 @@
-# Swasthyam-Hackout
+# Swasthyam
 A flutter app for detecting the probablistic diseases in patients using Machine Learning. Made during Hackout 2020 
 
 ## Idea motivation and solution
