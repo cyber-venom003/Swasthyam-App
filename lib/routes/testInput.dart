@@ -4,12 +4,10 @@ import 'package:swasthyam/routes/covidInput.dart';
 import 'package:swasthyam/routes/diabetesInput.dart';
 import 'package:swasthyam/routes/pneumoniaInput.dart';
 
-class TestInput extends StatefulWidget {
-  @override
-  _TestInputState createState() => _TestInputState();
-}
+// testInput.dart: Defines a stateless widget that gives the list of buttons for checking disease risk
+// by uploading test results. As of now, we have only created for 4 diseases.
 
-class _TestInputState extends State<TestInput> {
+class TestInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,3 +72,4 @@ class _TestInputState extends State<TestInput> {
     );
   }
 }
+

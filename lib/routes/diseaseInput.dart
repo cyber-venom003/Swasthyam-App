@@ -2,21 +2,16 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// diseaseInput.dart: Fetches the recommended tests for the disease given as input by user.
+
 class DiseaseInput extends StatefulWidget {
   @override
   _DiseaseInputState createState() => _DiseaseInputState();
 }
 
 class _DiseaseInputState extends State<DiseaseInput> {
-  FirebaseFirestore _db = FirebaseFirestore.instance;
   String disease = '';
   List listTests = [];
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -93,54 +88,3 @@ class _DiseaseInputState extends State<DiseaseInput> {
     );
   }
 }
-
-/*
-
-StreamBuilder(
-          stream: FirebaseFirestore.instance
-              .collection('diseases')
-              .doc('breast cancer')
-              .snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              try {
-                List recommendedTests = snapshot.data['tests'];
-                print(recommendedTests);
-                recommendedTests.forEach(
-                  (element) {
-                    listTests.add(
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(right: 16, left: 16, top: 12),
-                        child: Card(
-                          shadowColor: Color.fromRGBO(0, 0, 0, 0.75),
-                          elevation: 2,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: ListTile(
-                            title: Text(
-                              element,
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                );
-                return Container(
-                  child: ListView(
-                    children: listTests,
-                  ),
-                );
-              } catch (err) {
-                return Text("Something Went wrong. 😥");
-              }
-            }
-            return Text("You seems to be fit.🏃‍♀️🏃‍♂️");
-          },
-        ):Text("You seems to be fit.🏃‍♀️🏃‍♂️")
-      
-
-*/

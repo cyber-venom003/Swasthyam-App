@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:swasthyam/routes/predictedDisease.dart';
 
+//symptomsInput.dart: Defines a Stateful Widget which takes the input of symptoms of the user and displays them in a form of list containing tiles.
+
 class SymptomsInput extends StatefulWidget {
   @override
   _SymptomsInputState createState() => _SymptomsInputState();
@@ -9,7 +11,7 @@ class SymptomsInput extends StatefulWidget {
 
 class _SymptomsInputState extends State<SymptomsInput> {
   List<String> patientSymptoms = [];
-  String symptom = null;
+  String symptom;
 
   List<Widget> convertToTile(List<String> symptomStrings) {
     List<Widget> symptomTile = [];
@@ -65,8 +67,7 @@ class _SymptomsInputState extends State<SymptomsInput> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26.0),
               color: const Color(0xff3f9bfc),
-              border:
-              Border.all(width: 1.0, color: const Color(0xff3f9bfc)),
+              border: Border.all(width: 1.0, color: const Color(0xff3f9bfc)),
             ),
           ),
         )

@@ -1,9 +1,10 @@
 import 'dart:convert';
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
+
+// diabetesInput.dart: Defines a Stateful widget which takes numerical values of diabetes test and
+// get diabetes risk result. Sends the numerical data given by user through HTTP POST request to REST API Endpoint.
 
 class DiabetesInput extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class DiabetesInput extends StatefulWidget {
 class _DiabetesInputState extends State<DiabetesInput> {
   int pregnancies, glucose, bloodPressure, skinThickness, insulin, bmi, age;
   double diabetesPedgreeFuncion;
-  String url = "http://192.168.1.7:5000/predict"; // This is local ip of the network on which flask server is running
+  String url = "http://192.168.1.3:5000/predict"; // This is local ip of the network on which flask server is running
   int show = -1;
   @override
   void initState() {
@@ -25,7 +26,6 @@ class _DiabetesInputState extends State<DiabetesInput> {
     bmi = 32;
     age = 35;
     diabetesPedgreeFuncion = 0.47;
-    super.initState();
   }
 
   void getPredictions(

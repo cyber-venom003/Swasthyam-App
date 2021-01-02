@@ -1,9 +1,11 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
+
+// brainTumour.dart: Defines a Stateful Widget that takes Brain MRI image from the user gallery
+// and returns the tumour risk %. Sends the HTTP MultipartRequest by POST method to a REST API Endpoint.
 
 class TumourInput extends StatefulWidget {
   @override
@@ -14,7 +16,7 @@ class _TumourInputState extends State<TumourInput> {
   int tumourRisk = 0;
   void sendRequest(filename) async {
     var request = http.MultipartRequest(
-        'POST', Uri.parse("http://192.168.1.7:5000/predict"));      // This is local ip of the network on which flask server is running
+        'POST', Uri.parse("http://192.168.1.3:5000/predict"));      // This is local ip of the network on which flask server is running
     request.files.add(await http.MultipartFile.fromPath('image', filename));
     request.fields.addAll({"disease": "brainTumour"});
     try {
@@ -32,7 +34,6 @@ class _TumourInputState extends State<TumourInput> {
   void uploadImage() async {
     final _picker = ImagePicker();
     PickedFile image = await _picker.getImage(source: ImageSource.gallery);
-    //final File file = File(image.path);
     sendRequest(image.path);
   }
 

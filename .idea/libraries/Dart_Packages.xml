@@ -40,21 +40,21 @@
         <entry key="cloud_firestore">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.3/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.4/lib" />
             </list>
           </value>
         </entry>
         <entry key="cloud_firestore_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-2.2.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-2.2.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="cloud_firestore_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1+2/lib" />
             </list>
           </value>
         </entry>
@@ -62,13 +62,6 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0-nullsafety.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="cupertino_icons">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -82,21 +75,21 @@
         <entry key="firebase_core">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.2/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.3/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_core_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-2.0.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-2.1.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_core_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1+1/lib" />
             </list>
           </value>
         </entry>
@@ -131,7 +124,7 @@
         <entry key="font_awesome_flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -152,7 +145,7 @@
         <entry key="image_picker">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+12/lib" />
+              <option value="$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+17/lib" />
             </list>
           </value>
         </entry>
@@ -283,20 +276,19 @@
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0-nullsafety.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.2.0-nullsafety.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0-nullsafety.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.3/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-2.2.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-2.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.2.1+2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0-nullsafety.3/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0-nullsafety.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.2/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-2.0.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_platform_interface-2.1.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.2.1+1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.11.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+12/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+17/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-1.1.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10-nullsafety.1/lib" />

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+//predictedDisease.dart: Defines a Stateful widget gives a probabilistic match of diseases
+// which matches best with given input symptoms list. Fetches symptom data for each disease from cloud firestore
+// and matches it from the list got from symptomsInput.dart for a probabilistic match.
+
 class PredictDisease extends StatefulWidget {
   final List<String> symptoms;
   PredictDisease({@required this.symptoms});

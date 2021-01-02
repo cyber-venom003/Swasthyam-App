@@ -1,9 +1,11 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
+
+// covidInput.dart: Defines a Stateful Widget that takes Chest X Ray image from the user gallery
+// and returns the covid risk %. Sends the HTTP MultipartRequest by POST method to a REST API Endpoint.
 
 class CovidInput extends StatefulWidget {
   @override
@@ -14,7 +16,7 @@ class _CovidInputState extends State<CovidInput> {
   int covidRisk = 0;
   void sendRequest(filename) async {
     var request = http.MultipartRequest(
-        'POST', Uri.parse("http://192.168.1.7:5000/predict"));      // This is local ip of the network on which flask server is running
+        'POST', Uri.parse("http://192.168.1.3:5000/predict"));      // This is local ip of the network on which flask server is running
     request.files.add(await http.MultipartFile.fromPath('image', filename));
     request.fields.addAll({"disease": "covid"});
     try {

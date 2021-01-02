@@ -4,6 +4,8 @@ import 'package:swasthyam/routes/symptomsInput.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:swasthyam/routes/testInput.dart';
 
+// homePage.dart: Defines the UI of the home page of the app. Contains a Static AppBar, TabBar and a TabViewController.
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

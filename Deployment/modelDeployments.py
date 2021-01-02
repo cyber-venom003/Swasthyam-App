@@ -21,10 +21,10 @@ CORS(app)
 
 def getModels():
     global covidModel , brainTumourModel , pneumoniaModel , diabetesModel
-    covidModel = load_model('covid19.h5')
-    brainTumourModel = load_model('braintumuor.h5')
-    pneumoniaModel = load_model('pneumonia.h5') 
-    diabetesModel = joblib.load('diabetes_model.pkl')
+    covidModel = load_model('models/covid19.h5')
+    brainTumourModel = load_model('models/braintumuor.h5')
+    pneumoniaModel = load_model('models/pneumonia.h5')
+    diabetesModel = joblib.load('models/diabetes_model.pkl')
     print('* models loaded')
 
 def preprocessImage(image , targetSize):
